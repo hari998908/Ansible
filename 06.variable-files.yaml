@@ -1,7 +1,7 @@
 - name: Printing variables using Files
   hosts: local host
   vars_fies:
-  - vars.yaml
+    - vars.yaml
   tasks:
   - name: print override information
     ansible.builtin.debug:
