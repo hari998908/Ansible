@@ -1,0 +1,14 @@
+- name: Print Variable at task Level
+  hosts: localhost
+  vars:
+    course: "Terraform"
+    Trainer: "Hari"
+    Duration: "120hrs"
+  tasks:
+  - name: Print the variable at task Level
+    vars:
+      course: DevOps
+    ansible.builin.debug:
+      msg: "Hi, We are learning {{course}} from Trainer{{Trainer}},Duration is:{{Duration}}
+
+      
