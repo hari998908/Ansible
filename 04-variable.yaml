@@ -7,4 +7,4 @@
   tasks:
   - name: Print Data Using Variables
     ansible.builtin.debug:
-      msg: "The Course name is: {{Ansible}},Trainer is:{{Hari}} and the Duartion is: {{Duration}}"
+      msg: "The Course name is:{{course}},Trainer is:{{Trainer}} and the Duartion is: {{Duration}}"
