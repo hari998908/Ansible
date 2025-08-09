@@ -5,5 +5,4 @@
     vars:
       Timings: "01:00PM IST"
     ansible.builtin.debug:
-      mas: "Course Name: {{Couse}},Trainer: {{Trainer}},Duration:{{Duration}},Timing: {{Timings}}"
-      
+      mas: "Course Name: {{Course}},Trainer: {{Trainer}},Duration:{{Duration}},Timing: {{Timings}}"
