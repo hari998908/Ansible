@@ -1,16 +1,19 @@
-- name: variables
+- name: Print Variables under Task
   hosts: localhost
-  vars: #variable declaration
+  vars:
     Course: "Terraform"
-    Trainer: "Siva"
-    Duration: "15hrs"
+    Trainer: "Hari"
+    Duration: "120hrs"
   tasks:
-  - name: print override information
-    vars: # Task level variables
+  - name: Print variables in tasks
+    vars:
       Course: "DevOps"
     ansible.builtin.debug:
-      msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."
-      
-  - name: print information
+      msg: "Hi, You are learning course {{Course}} from {{Trainer}},Duration is:{{Duration}}"
+  
+  - name: Print Play Level Variables
     ansible.builtin.debug:
-      msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."
+      msg: "Hi, You are learning course {{Course}} from {{Trainer}},Duration is:{{Duration}}"
+
+
+      
