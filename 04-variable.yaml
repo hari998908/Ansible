@@ -1,5 +1,5 @@
 - name: Ansible Variables
-  hosts: local
+  hosts: localhost
   vars:
     course: "Ansible"
     Trainer: "Hari"
