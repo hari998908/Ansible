@@ -10,5 +10,3 @@
       course: DevOps
     ansible.builin.debug:
       msg: "Hi, We are learning {{course}} from Trainer{{Trainer}},Duration is:{{Duration}}
-
-      
