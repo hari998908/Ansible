@@ -1,0 +1,11 @@
+- name: Ansible Variables
+  hosts: local
+  vars:
+    course: "Ansible"
+    Trainer: "Hari"
+    Duration: "120hrs"
+  taks:
+  - name: Print Data Using Variables
+    ansible.builtin.debug:
+      msg: "The Course name is: {{Ansible}},Trainer is:{{Hari}} and the Duartion is: {{Duration}}"
+      
