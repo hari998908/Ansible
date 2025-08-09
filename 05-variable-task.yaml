@@ -7,6 +7,6 @@
   tasks:
   - name: Print the variable at task Level
     vars:
-      course: DevOps
+      course: "DevOps"
     ansible.builin.debug:
       msg: "Hi, We are learning {{course}} from Trainer{{Trainer}},Duration is:{{Duration}}"
