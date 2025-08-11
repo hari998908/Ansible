@@ -5,9 +5,10 @@
   tasks: 
   - name: Install or uninstall below list of Packages
     ansible.builtin.dnf:
-      name: 
-      state: 
+      name: {{item.name}}
+      state: {{item.state}}
     loop:
     - {name: 'mysql', state: 'latest'}
     - {name: 'nginx', state: 'absent'}
     - {name: 'postfix', state: 'absent'}
+    
