@@ -1,14 +1,12 @@
 - name: Instlla or uninstall Packages
   hosts: localhost
   become: yes
-
   tasks: 
   - name: Install or uninstall below list of Packages
     ansible.builtin.dnf:
-      name: {{item.name}}
-      state: {{item.state}}
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
     loop:
     - {name: 'mysql', state: 'latest'}
     - {name: 'nginx', state: 'absent'}
     - {name: 'postfix', state: 'absent'}
-    
