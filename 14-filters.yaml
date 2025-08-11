@@ -1,0 +1,87 @@
+- name: Filters
+  hosts: localhost
+  tasks:
+  - name: DEFAULT
+    ansible.builtin.debug:
+      msg: "Hello {{ Course | default ('Ansible') }}"
+
+- name: UPPERCASE
+  hosts: localhost
+  vars:
+    greetings: "Hello,GoodMorning!"
+  tasks:
+  - name: Convert into UPPERCASE
+    ansible.builtin.debug:
+      msg: "{{ greetings | upper }}"
+
+- name: LOWERCASE
+  hosts: localhost
+  vars:
+    greetings: "Hello,GoodMorning!"
+  tasks:
+  - name: Convert into LOWERCASE
+    ansible.builtin.debug:
+      msg: "{{ greetings | lower }}"
+
+- name: Remove Duplicates
+  hosts: localhost
+  vars:
+    NUMBER: [2,5,8,9,2,5,9,6,3,5,2]
+  tasks: 
+  - name: Remove Duplicates
+    ansible.builtin.debug:
+      msg: "{{ NUMBER | unique }}"
+
+- name: Max NUMBER
+  hosts: localhost
+  vars:
+    age: [35,45,20,16,18,89]
+  tasks:
+  - name: Print Max number
+    ansible.builtin.debug:
+      msg: "{{ age | max }}"
+
+- name: Min Number
+  hosts: localhosts
+  vars: 
+    age: [35,45,20,16,18,89]
+  tasks:
+  - name: Print Minimum Number
+    ansible.builtin.debug:
+      msg: "{{ age | min }}"
+
+- name: Dictories into items
+  hosts: localhost
+  vars:
+    my_dic:
+      Couse: "DevOps"
+      Duration: "120 hrs"
+      Trainer: "Hari"
+  tasks:
+  - name: Covert Dictionaries to items
+    ansible.builtin.debug:
+      msg: "{{ my_dic | dict2items }}"
+
+- name: Items to Dictionaries
+  hosts: localhost
+  vars:
+    my_list:
+    - {'key': Couse, 'value': Ansible}
+    - {'key': Duration, 'value': 10hrs}
+    - {'key': Trainer, 'value': Hari}
+
+  tasks:
+  - name: Conver Items to Dictionary
+    ansible.builtin.debug:
+      msg: "{{ my_list | items2dict }}"
+
+
+# DEFAULT
+# UPPER
+# LOWER
+# DUPLICATE
+# MAX
+# MIN
+# Dictonary to Items
+# Items to Dictionary
+

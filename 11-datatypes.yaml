@@ -11,6 +11,10 @@
       AWS: 5
       Docker: 6
     RealProject: true #Booleon
-    
+
+  tasks:
+  - name: Print all data types
+    ansible.builtin.debug:
+      msg: "Course:{{Course}},Experiense:{{Experiense}},RealProject:{{RealProject}}"
 
   

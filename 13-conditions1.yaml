@@ -1,0 +1,18 @@
+- name: Conditions
+  hosts: localhost
+  become: yes
+  vars_prompt:
+  - name: NUMBER
+    prompt: Enter Numebr Between 1 to 9
+    private: no
+  
+  tasks:
+  - name: Number is less than 10
+    ansible.builtin.debug:
+      msg: "The {{NUMBER}} is less than 10"
+    when: NMUBER | int < 10
+  - name: Number is Greater or Equal to 10
+    ansible.builtin.debug:
+      msg: "The {{NMUBER}} is Greater or Equal to 10"
+    when: NMUBER | int >= 10
+    
