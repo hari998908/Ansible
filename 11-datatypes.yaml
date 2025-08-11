@@ -1,0 +1,16 @@
+- name: Datatypes
+  hosts: localhost
+  vars:
+    Course: "AWS DevOps"  #String
+    Tools:   #List
+    - Linux
+    - Ansible
+    - Terraform
+    Experiense: #Map or Dictionary
+      Devops: 3
+      AWS: 5
+      Docker: 6
+    RealProject: true #Booleon
+    
+
+  
