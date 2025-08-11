@@ -3,4 +3,4 @@
   tasks:
   - name: Print Information
     ansible.bultin.debug:
-      msg: "Hi, We are learning Course:{{Course}} from Trainer: {{Trainer}},Duration :{{Duration}}"
+      msg: "Hi, We are learning Course:{{Course}} from Trainer: {{Trainer}}"
