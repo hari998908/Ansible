@@ -1,0 +1,6 @@
+- name: Variable Preferences
+  hosts: localhost
+  tasks:
+  - name: Print Information
+    ansible.bultin.debug:
+      msg: "Hi, We are learning Course:{{Couse}} from Trainer: {{Trainer}},Duration :{{Duration}}"
