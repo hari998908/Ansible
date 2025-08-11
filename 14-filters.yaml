@@ -17,7 +17,7 @@
 - name: LOWERCASE
   hosts: localhost
   vars:
-    greetings: "Hello,GoodMorning!"
+    greetings: "HELLO,GM!"
   tasks:
   - name: Convert into LOWERCASE
     ansible.builtin.debug:
